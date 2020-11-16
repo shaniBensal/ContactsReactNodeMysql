@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../nav-bar/NavBar";
+import Navbar from "../../components/nav-bar/NavBar";
 
 const layout = (props) => (
   <section>

@@ -5,3 +5,5 @@ class ContactEdit extends Component {
     contact: {},
   };
 }
+
+export default ContactEdit;

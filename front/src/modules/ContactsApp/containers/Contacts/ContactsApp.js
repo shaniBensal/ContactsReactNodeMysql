@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Contacts from "../../components/Contacts/Contacts";
-import ContactList from "../../data/ContactList";
+import ContactList from "../../../../data/ContactList";
 
 export default class ContactsApp extends Component {
   state = {

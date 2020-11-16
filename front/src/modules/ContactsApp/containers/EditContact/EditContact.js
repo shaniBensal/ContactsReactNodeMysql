@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Contacts from "../../data/ContactList";
+import Contacts from "../../../../data/ContactList";
 
 export default class EditContact extends Component {
   state = {

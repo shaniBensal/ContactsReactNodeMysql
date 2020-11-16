@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import imgAvatar from '../../assets/img_avatar.png';
+import imgAvatar from "../../../../assets/img_avatar.png";
 
 class ContactDetails extends Component {
   state = {
