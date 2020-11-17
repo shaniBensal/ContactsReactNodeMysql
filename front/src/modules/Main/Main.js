@@ -12,13 +12,8 @@ export default class MainApp extends Component {
       <React.Fragment>
         <div className="container">
           <div className="row pb-3">
-            <div className="container justify-content-center d-flex align-items-center flex-column">
-              <div className="row">
-                <h1>My Apps</h1>
-              </div>
-              <div className="row">
-                <h3>All you need to orgnize in one place!</h3>
-              </div>
+            <div className="w-100 justify-content-center d-flex align-items-center">
+              <h3>All you need to orgnize in one place!</h3>
             </div>
           </div>
           <div className="row d-flex align-items-center justify-content-center">
