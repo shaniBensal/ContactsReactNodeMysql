@@ -1,43 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
+import ButtonList from "./Buttons/ButtonList";
+import defaultAvatar from "../../../../assets/img_avatar.png";
 
 const deleteContact = (onRemoveContact, contactId) => {
   onRemoveContact(contactId);
 };
 
 const Contact = ({ contact, onRemoveContact }) => {
+  const userPic = contact.img ? contact.img : defaultAvatar;
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={contact.img} />
-      <Card.Body>
-        <Card.Title>
-          {contact.firstName} {contact.lastName}
-        </Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Card.Footer className="p-2">
-          <Button className="mr-2 btn-info">
-            <Link className="text-light" to={`/contact/${contact.id}`}>
-              View
-            </Link>
-          </Button>
-          <Button
-            onClick={()=>deleteContact(onRemoveContact, contact.id)}
+    <React.Fragment>
+      <div className="container d-flex mb-2 py-2 border rounded">
+        <div className="col-4 pl-0">
+          <div className="d-flex align-items-center">
+            <img src={userPic} alt={contact.firstName} />
+            <p className="mb-0 pl-2">
+              {contact.firstName} {contact.lastName}
+            </p>
+          </div>
+        </div>
+        <div className="col-8 justify-content-end d-flex pr-0">
+          {ButtonList.map((btn) => {
+            return (
+              <Button key={btn.id} className={btn.classNameBtn}>
+                <Link
+                  className={btn.classNameLink}
+                  to={`${btn.linkUrl}${contact.id}`}
+                >{btn.icon}</Link>
+              </Button>
+            );
+          })}
+
+          {/* <Button
+            onClick={() => deleteContact(onRemoveContact, contact.id)}
             className="mr-2 btn-danger"
           >
             Delete
-          </Button>
-          <Link to={`/contact/edit/${contact.id}`}>
-          <Button className="btn-success">Edit</Button>
-          </Link>
-        </Card.Footer>
-      </Card.Body>
-    </Card>
+          </Button> */}
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 

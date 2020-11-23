@@ -1,26 +1,31 @@
-import React from 'react';
-import Contact from '../Contact/Contact';
-import Style from './Contacts.css';
+import React from "react";
+import Contact from "../Contact/Contact";
+import { ListGroup } from "react-bootstrap";
 
-const removeContactFromCard=(deleteContact, contactId)=> {
-  deleteContact(contactId)
-}
+const removeContactFromCard = (deleteContact, contactId) => {
+  deleteContact(contactId);
+};
 
-const Contacts = ({contacts, deleteContact}) => {
-    const contactsPreview = contacts.map((contact) => {
-        return (
-          <li key={contact.id} className="contact-list-item mr-2">
-            <Contact contact={contact} onRemoveContact={(contactId)=> removeContactFromCard(deleteContact, contactId)}/>
-          </li>
-        )
-      });
-    
-      return (
-        <div className="contacts-list">
-          <ul className="d-flex align-items-center">
-            {contactsPreview}
-          </ul>
-        </div>
-      );
-      };
+const Contacts = ({ contacts, deleteContact }) => {
+  const contactsPreview = contacts.map((contact) => {
+    return (
+      <Contact
+      key={contact.id}
+        contact={contact}
+        onRemoveContact={(contactId) =>
+          removeContactFromCard(deleteContact, contactId)
+        }
+      />
+    );
+  });
+
+  return (
+    <div>
+    <h1>Contact List</h1>
+      <ListGroup variant="flush">
+        <ListGroup.Item className="app-bg">{contactsPreview}</ListGroup.Item>
+      </ListGroup>
+    </div>
+  );
+};
 export default Contacts;

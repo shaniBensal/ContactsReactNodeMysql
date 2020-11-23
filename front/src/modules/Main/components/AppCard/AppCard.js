@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import './AppCard.css';
+import './AppCard.scss';
 import { Link } from "react-router-dom";
 
 const AppCard = ({ card }) => {

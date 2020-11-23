@@ -1,0 +1,13 @@
+.purple-btn-outline {
+    border: 1px solid #7952b3 !important;
+  }
+  
+  .btn-outline {
+    background-color: transparent !important;
+    color: inherit !important;
+    transition: all 0.5s;
+  }
+
+  .btn-outline a::hover {
+      color: inherit !important;
+  }

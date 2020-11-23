@@ -11,13 +11,13 @@ import NotesApp from "./modules/NotesApp/NotesApp";
 const MainRoutes = () =>(
     <Router>
     <Switch>
-          <Route path="/contacts">
+          <Route exact path="/contacts">
             <ContactsMain />
           </Route>
-          <Route path="/notes">
+          <Route exact path="/notes">
             <NotesApp />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <MainApp />
           </Route>
         </Switch>
