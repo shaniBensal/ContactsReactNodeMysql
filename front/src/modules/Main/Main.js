@@ -19,7 +19,7 @@ export default class MainApp extends Component {
           <div className="row d-flex align-items-center justify-content-center">
             <ul className="d-flex align-items-center pl-0 justify-content-around w-100">
               {this.state.apps.map((app) => (
-                <li key={app.id} className="list-item">
+                <li key={app.id} className="list-item pr-2">
                   <AppCard card={app}></AppCard>
                 </li>
               ))}
