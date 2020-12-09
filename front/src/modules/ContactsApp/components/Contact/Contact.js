@@ -33,12 +33,12 @@ const Contact = ({ contact, onRemoveContact }) => {
             );
           })}
 
-          {/* <Button
+          <Button
             onClick={() => deleteContact(onRemoveContact, contact.id)}
             className="mr-2 btn-danger"
           >
             Delete
-          </Button> */}
+          </Button>
         </div>
       </div>
     </React.Fragment>

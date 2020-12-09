@@ -6,8 +6,7 @@ module.exports = (app) => {
   // Create a new Tutorial
   router.post("/insertcontacts", users.addMultipleUsers);
 
-  // Create a new Tutorial
-  // router.post("/", users.create);
+  router.post("/", users.create);
 
   // Retrieve all Tutorials
   router.get("/", users.findAll);
