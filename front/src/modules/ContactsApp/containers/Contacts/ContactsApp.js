@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Contacts from "../../components/Contacts/Contacts";
 import ContactList from "../../../../data/ContactList";
+import service from '../../_service/contacts';
 
 export default class ContactsApp extends Component {
   state = {
@@ -8,7 +9,9 @@ export default class ContactsApp extends Component {
   };
   
   componentDidMount() {
-    this.setState({ contactList: ContactList });
+    service.getAllContacts().then(res => {
+      this.setState({contactList: res.data})
+    })
   }
 
   deleteSpecificContact = (contactId) => {
