@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
-class ContactEdit extends Component {
+export default class ContactEdit extends Component {
   state = {
     contact: {},
   };
 
   componentDidMount() {
-    console.log('edit')
+    console.log("edit");
+  }
+  render() {
+    return (
+      <h1>SHA</h1>
+    );
   }
 }
-
-export default ContactEdit;

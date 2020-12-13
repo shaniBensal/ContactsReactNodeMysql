@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../Contact/Contact";
 import { ListGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const removeContactFromCard = (deleteContact, contactId) => {
   deleteContact(contactId);
@@ -25,6 +26,9 @@ const Contacts = ({ contacts, deleteContact }) => {
       <ListGroup variant="flush">
         <ListGroup.Item className="app-bg">{contactsPreview}</ListGroup.Item>
       </ListGroup>
+      <div>
+      <Button variant="outline-info" href="/contacts/new">Add New</Button>
+      </div>
     </div>
   );
 };
